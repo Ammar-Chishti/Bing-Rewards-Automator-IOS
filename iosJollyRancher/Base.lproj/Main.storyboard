@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iosJollyRancher" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pl7-X1-3Dp">
+                                <rect key="frame" x="0.0" y="20" width="375" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="pVL-HH-hDT"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="My Bing Rewards Automator" id="iwh-gq-fhx"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2CE-9S-FLZ">
+                                <rect key="frame" x="137" y="127" width="101" height="101"/>
+                                <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="101" id="SYL-CC-uFM"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="myBttn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="huv-Pc-pbH"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K8S-Gh-d1E">
+                                <rect key="frame" x="16" y="322" width="345" height="300"/>
+                                <subviews>
+                                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j8T-9u-Pxh">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="300"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <wkWebViewConfiguration key="configuration">
+                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                            <wkPreferences key="preferences"/>
+                                        </wkWebViewConfiguration>
+                                    </wkWebView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="j8T-9u-Pxh" firstAttribute="top" secondItem="K8S-Gh-d1E" secondAttribute="top" id="1XB-fq-X4K"/>
+                                    <constraint firstAttribute="trailing" secondItem="j8T-9u-Pxh" secondAttribute="trailing" id="1qx-VT-uqn"/>
+                                    <constraint firstItem="j8T-9u-Pxh" firstAttribute="leading" secondItem="K8S-Gh-d1E" secondAttribute="leading" id="KEt-Zf-Wuw"/>
+                                    <constraint firstAttribute="bottom" secondItem="j8T-9u-Pxh" secondAttribute="bottom" id="OpS-jY-TKZ"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press the Button to Perform 25 Searches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHr-ue-8F3">
+                                <rect key="frame" x="31" y="80" width="313" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Make sure you are signed into Microsoft first" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DaA-pI-1kN">
+                                <rect key="frame" x="14" y="261" width="347" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pl7-X1-3Dp" firstAttribute="centerX" secondItem="2CE-9S-FLZ" secondAttribute="centerX" id="JKs-r3-l7P"/>
+                            <constraint firstItem="K8S-Gh-d1E" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="PYQ-aV-ahs"/>
+                            <constraint firstItem="DaA-pI-1kN" firstAttribute="top" secondItem="2CE-9S-FLZ" secondAttribute="bottom" constant="33" id="Rw2-jl-HHn"/>
+                            <constraint firstItem="K8S-Gh-d1E" firstAttribute="top" secondItem="2CE-9S-FLZ" secondAttribute="bottom" constant="94" id="V0h-Ho-sjh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="K8S-Gh-d1E" secondAttribute="trailing" constant="14" id="XLL-Qd-dL9"/>
+                            <constraint firstItem="DaA-pI-1kN" firstAttribute="trailing" secondItem="K8S-Gh-d1E" secondAttribute="trailing" id="a3e-Xw-9Pg"/>
+                            <constraint firstItem="pl7-X1-3Dp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cBy-IN-1Ug"/>
+                            <constraint firstItem="2CE-9S-FLZ" firstAttribute="top" secondItem="pl7-X1-3Dp" secondAttribute="bottom" constant="64" id="ega-bh-LgP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="K8S-Gh-d1E" secondAttribute="bottom" constant="45" id="juF-Hx-7tO"/>
+                            <constraint firstItem="rHr-ue-8F3" firstAttribute="top" secondItem="pl7-X1-3Dp" secondAttribute="bottom" constant="17" id="koR-hV-kxw"/>
+                            <constraint firstItem="rHr-ue-8F3" firstAttribute="centerX" secondItem="pl7-X1-3Dp" secondAttribute="centerX" id="mc1-dx-Gjx"/>
+                            <constraint firstItem="2CE-9S-FLZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="137" id="mig-32-vTQ"/>
+                            <constraint firstItem="pl7-X1-3Dp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ubf-7s-NuX"/>
+                            <constraint firstAttribute="trailing" secondItem="pl7-X1-3Dp" secondAttribute="trailing" id="xJW-gw-CgV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="myBtn" destination="2CE-9S-FLZ" id="26J-aG-IPF"/>
+                        <outlet property="myView" destination="K8S-Gh-d1E" id="eTp-E5-PV1"/>
+                        <outlet property="webView" destination="j8T-9u-Pxh" id="Rpd-vZ-iTe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="805.60000000000002" y="-776.76161919040487"/>
+        </scene>
+    </scenes>
+</document>

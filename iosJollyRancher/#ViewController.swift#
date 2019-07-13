@@ -1,0 +1,57 @@
+a//
+//  ViewController.swift
+//  iosJollyRancher
+//
+//  Created by Ammar Chishti on 5/28/19.
+//  Copyright © 2019 Ammar Chishti. All rights reserved.
+//
+
+import UIKit
+import WebKit
+
+class ViewController: UIViewController {
+    
+    @IBOutlet weak var myBtn: UIButton!
+    @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var myView: UIView!
+    @IBAction func myBttn(_ sender: Any) {
+        
+        for x in 0...26 {
+            let myRandURLString = randomString(10);
+            
+        }
+        
+        
+        
+    }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        myBtn.layer.cornerRadius = myBtn.frame.width/2;
+        myBtn.layer.masksToBounds = true;
+        
+        // Loading the webview
+        webView = WKWebView(frame: myView.bounds, configuration: WKWebViewConfiguration())
+        webView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
+        self.myView.addSubview(webView)
+        
+        
+ c       let myURL = URL(string:"https://www.bing.com")
+        let myRequest = URLRequest(url: myURL!)
+        webView.load(myRequest)
+        
+    }
+    
+    // To generate the random URL's
+    func randomString(_ length: Int) -> String {
+        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        return String((0..<length).map{ _ in letters.randomElement()! })
+    }
+    
+    
+
+    
+}
+
